@@ -64,4 +64,24 @@ public class Biblioteca {
 
         return libroCreado;
     }
+
+    /**
+     * Elimina el libro solicitado por su Identificador del catálogo y devuelve el libro eliminado
+     * @param idLibro identificador del libro a eliminar
+     * @return libro eliminado
+     */
+    public Libro deleteLibro(int idLibro){
+        Libro libroEncontrado = null;
+        boolean seguirBuscando = true;
+
+        for (int i = 0; i < CANT_MAX_LIBROS && seguirBuscando; i++){
+            if ( catalogo[i] != null && catalogo[i].getId() == idLibro ){
+                libroEncontrado = catalogo[i];
+                catalogo[i] = null;
+                seguirBuscando = false;
+            }
+        }
+
+        return libroEncontrado;
+    }
 }
