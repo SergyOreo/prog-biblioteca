@@ -68,7 +68,7 @@ public class Libro {
         sb.append(String.format("titulo : %s;" , titulo));
         sb.append(String.format("autor : %s;" , autor));
         sb.append(String.format("numPaginas : %d;" , numPaginas));
-        sb.append("}");
+        sb.append("}\n");
 
         return sb.toString();
     }
